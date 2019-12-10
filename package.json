@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "portafolio lindo",
   "main": "index.js",
-  "homepage": "https://MS-2.github.io/me",
+  "homepage": "https://ms-2.github.io/me/",
   "scripts": {
     "sass": "node-sass -w scss/ -o dist/css/ --recursive",
     "deploy": "gh-pages -d dist"
