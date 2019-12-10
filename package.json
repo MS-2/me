@@ -1,0 +1,14 @@
+{
+  "name": "folio",
+  "version": "1.0.0",
+  "description": "portafolio lindo",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "juan jose rodriguez nelo",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.13.0"
+  }
+}
