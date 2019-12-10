@@ -148,9 +148,9 @@ main{
     margin-top: 1rem;
 
     div{
-        font-size: 2rem;
+        font-size: 1.5rem;
         border: 3px white solid;
-        padding:  1.5rem 2.5rem;
+        padding:  1.5rem 2rem;
         margin-bottom: 3rem;
         @include easyOut;
 
@@ -196,6 +196,7 @@ main{
     background: darken($primary-color, 10);
     color: set-text-color($primary-color);
     height: 60px;
+
 }
 
 .dust {
