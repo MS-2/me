@@ -173,11 +173,17 @@ main {
     grid-area: bio;
     font-size: 1.5rem; }
   .about-info .job1 {
-    grid-area: job1; }
+    grid-area: job1;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px; }
   .about-info .job2 {
-    grid-area: job2; }
+    grid-area: job2;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px; }
   .about-info .job3 {
-    grid-area: job3; }
+    grid-area: job3;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px; }
   .about-info .job {
     background: #052438;
     padding: 0.5rem;
