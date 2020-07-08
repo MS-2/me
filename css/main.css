@@ -7,7 +7,8 @@
   transition: all 0.5s ease-out; }
   .menu-btn .btn-line {
     width: 28px;
-    height: 3px;
+    height: 10px;  
+    /* height: 3px;  "hamburguer&&"x" */
     margin: 0 0 5px 0;
     background: #fff;
     transition: all 0.5s ease-out; }
@@ -160,7 +161,8 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
+  grid-template-areas: 'bioimage bio bio'
+ 'job1 job2 job3';
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-image {
     height: 200px;
@@ -286,7 +288,12 @@ main {
       background: url("../img/PIX.jpg");
       contain: contain; }
   .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'bio' 'job1' 'job2' 'job3';
+    grid-template-areas: 'bioimage'
+ 'bio'
+ 'bio'
+ 'job1'
+ 'job2'
+ 'job3';
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }
