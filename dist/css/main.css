@@ -8,6 +8,7 @@
   .menu-btn .btn-line {
     width: 28px;
     height: 10px;
+    /* height: 3px;  iconHmaburguer&&"x" */
     margin: 0 0 5px 0;
     background: #fff;
     transition: all 0.5s ease-out; }
@@ -165,7 +166,7 @@ main {
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-image {
     height: 200px;
-    width: 200px;
+    width: 180px;
     grid-area: bioimage;
     border-radius: 50%;
     margin: auto;
@@ -174,11 +175,17 @@ main {
     grid-area: bio;
     font-size: 1.5rem; }
   .about-info .job1 {
-    grid-area: job1; }
+    grid-area: job1;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px; }
   .about-info .job2 {
-    grid-area: job2; }
+    grid-area: job2;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px; }
   .about-info .job3 {
-    grid-area: job3; }
+    grid-area: job3;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px; }
   .about-info .job {
     background: #052438;
     padding: 0.5rem;
