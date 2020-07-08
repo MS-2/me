@@ -7,8 +7,7 @@
   transition: all 0.5s ease-out; }
   .menu-btn .btn-line {
     width: 28px;
-    height: 10px;
-    /* height: 3px;  iconHmaburguer&&"x" */
+    height: 3px;
     margin: 0 0 5px 0;
     background: #fff;
     transition: all 0.5s ease-out; }
@@ -161,12 +160,11 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: 'bioimage bio bio'
- 'job1 job2 job3';
+  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-image {
     height: 200px;
-    width: 180px;
+    width: 200px;
     grid-area: bioimage;
     border-radius: 50%;
     margin: auto;
@@ -175,17 +173,11 @@ main {
     grid-area: bio;
     font-size: 1.5rem; }
   .about-info .job1 {
-    grid-area: job1;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px; }
+    grid-area: job1; }
   .about-info .job2 {
-    grid-area: job2;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px; }
+    grid-area: job2; }
   .about-info .job3 {
-    grid-area: job3;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px; }
+    grid-area: job3; }
   .about-info .job {
     background: #052438;
     padding: 0.5rem;
@@ -288,12 +280,7 @@ main {
       background: url("../img/PIX.jpg");
       contain: contain; }
   .about-info {
-    grid-template-areas: 'bioimage'
- 'bio'
- 'bio'
- 'job1'
- 'job2'
- 'job3';
+    grid-template-areas: 'bioimage' 'bio' 'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }
