@@ -1,4 +1,4 @@
-(function (){
+(function () {
 
     // General
     var canvas,
@@ -9,7 +9,7 @@
 
     // Game Controller
     // ---------------
-    var Game = function() {
+    var Game = function () {
 
         this.level = -1;
         this.lost = false;
@@ -18,14 +18,14 @@
     }
 
     Game.prototype = {
-        update: function() {
+        update: function () {
             game.player.update();
         },
 
-        draw: function() {
+        draw: function () {
 
             screen.clearRect(0, 0, gameSize.width, gameSize.height);
-            screen.fillStyle = "white";
+            screen.fillStyle = "#4BFF00";
             screen.fill();
             screen.beginPath();
             this.player.draw();
@@ -37,7 +37,7 @@
 
     // Player
     // ------
-    var Player = function() {
+    var Player = function () {
         this.active = true;
         this.size = {
             width: 16,
@@ -54,7 +54,7 @@
     };
 
     Player.prototype = {
-        update: function() {
+        update: function () {
             for (var i = 0; i < this.projectile.length; i++) this.projectile[i].update();
 
             if (!this.active) return;
@@ -63,7 +63,7 @@
             if (this.keyboarder.isDown(this.keyboarder.KEYS.LEFT) && this.coordinates.x > 0) this.coordinates.x -= 4;
             //move right
             else if (this.keyboarder.isDown(this.keyboarder.KEYS.RIGHT) && this.coordinates.x < gameSize.width - this.size.width) this.coordinates.x += 4;
-           
+
             if (this.keyboarder.isDown(this.keyboarder.KEYS.Space)) {
                 console.log("do action")
             }
@@ -84,7 +84,7 @@
             // }
 
         },
-        draw: function() {
+        draw: function () {
             if (this.active) {
                 screen.rect(this.coordinates.x, this.coordinates.y, this.size.width, this.size.height);
                 screen.rect(this.coordinates.x - 2, this.coordinates.y + 2, 20, 6);
@@ -94,7 +94,7 @@
             for (var i = 0; i < this.projectile.length; i++) this.projectile[i].draw();
 
         },
-        destroy: function() {
+        destroy: function () {
             this.active = false;
             game.lost = true;
         }
@@ -102,7 +102,7 @@
 
     // Projectile
     // ------
-    var Projectile = function(coordinates, velocity) {
+    var Projectile = function (coordinates, velocity) {
         this.active = true;
         this.coordinates = coordinates;
         this.size = {
@@ -113,21 +113,21 @@
     };
 
     Projectile.prototype = {
-        update: function() {
+        update: function () {
             this.coordinates.x += this.velocity.x;
             this.coordinates.y += this.velocity.y;
 
             if (this.coordinates.y > gameSize.height || this.coordinates.y < 0) this.active = false;
 
         },
-        draw: function() {
+        draw: function () {
             if (this.active) screen.rect(this.coordinates.x, this.coordinates.y, this.size.width, this.size.height);
         }
     };
 
     // Keyboard input tracking
     // -----------------------
-    var KeyController = function() {
+    var KeyController = function () {
         this.KEYS = {
             LEFT: 37,
             RIGHT: 39,
@@ -137,7 +137,7 @@
         var keyState = {};
 
         var counter;
-        window.addEventListener('keydown', function(e) {
+        window.addEventListener('keydown', function (e) {
             for (counter = 0; counter < keyCode.length; counter++)
                 if (keyCode[counter] == e.keyCode) {
                     keyState[e.keyCode] = true;
@@ -145,7 +145,7 @@
                 }
         });
 
-        window.addEventListener('keyup', function(e) {
+        window.addEventListener('keyup', function (e) {
             for (counter = 0; counter < keyCode.length; counter++)
                 if (keyCode[counter] == e.keyCode) {
                     keyState[e.keyCode] = false;
@@ -153,7 +153,7 @@
                 }
         });
 
-        this.isDown = function(keyCode) {
+        this.isDown = function (keyCode) {
             return keyState[keyCode] === true;
         };
     };
@@ -161,11 +161,11 @@
 
     // Start game
     // ----------
-    window.addEventListener('load', function() {
+    window.addEventListener('load', function () {
 
         var invaderAsset = new Image;
         invaderAsset.src = "https://nextpage.agency/inv.png";
-        invaderAsset.onload = function() {
+        invaderAsset.onload = function () {
 
             canvas = document.getElementById("space-invaders");
             screen = canvas.getContext('2d');
