@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L4MXWEQFRS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-L4MXWEQFRS');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -9,6 +19,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>works</title>
 </head>
+
 <body id="bg-img">
     <header>
         <div class="menu-btn">
@@ -46,52 +57,52 @@
             My <span class="text-secondary">Work</span>
         </h1>
         <h2 class="nombrepeq">
-            I like retro games 
+            I like retro games
         </h2>
 
 
-                    <!-- --------------------------------------------------------------------------------- -->
+        <!-- --------------------------------------------------------------------------------- -->
 
-    <div class="main" role="main">
-        <div class="flex"></div>
-        <div class="game">
-            <div class="game-header">
-                <p class="game-counter">
-                    Your points:
-                    <span id="g-count">
-                        1
-                    </span>
-                </p>
-                <button type="button" class="game-btn" id="restart">Restart</button>
-            </div>
-            <div class="game-body">
-                <div class="game-body__inner">
-                    <canvas id="space-invaders" />
+        <div class="main" role="main">
+            <div class="flex"></div>
+            <div class="game">
+                <div class="game-header">
+                    <p class="game-counter">
+                        Your points:
+                        <span id="g-count">
+                            1
+                        </span>
+                    </p>
+                    <button type="button" class="game-btn" id="restart">Restart</button>
                 </div>
-            </div>
-            <div class="game-footer">
-                <p class="text-title">
-                    Space Invaders destroyed this page! Take revenge on them!
-                </p>
-                <p class="text-navigation" id="g-helper">
-                    Use <span class="game-control">Space</span> to shoot and <span
-                        class="game-control">←</span>&#160;<span class="game-control">→</span> to
-                    move!&#160;&#160;&#160;
-                </p>
-            </div>
-            <div class="game-nav" id="g-nav">
-                <div class="game-nav__inner">
-                    <button type="button" class="game-nav__btn" id="g-shot">Shot</button>
-                    <button type="button" class="game-nav__btn" id="g-left">←</button>
-                    <button type="button" class="game-nav__btn" id="g-right">→</button>
+                <div class="game-body">
+                    <div class="game-body__inner">
+                        <canvas id="space-invaders" />
+                    </div>
+                </div>
+                <div class="game-footer">
+                    <p class="text-title">
+                        Space Invaders destroyed this page! Take revenge on them!
+                    </p>
+                    <p class="text-navigation" id="g-helper">
+                        Use <span class="game-control">Space</span> to shoot and <span
+                            class="game-control">←</span>&#160;<span class="game-control">→</span> to
+                        move!&#160;&#160;&#160;
+                    </p>
+                </div>
+                <div class="game-nav" id="g-nav">
+                    <div class="game-nav__inner">
+                        <button type="button" class="game-nav__btn" id="g-shot">Shot</button>
+                        <button type="button" class="game-nav__btn" id="g-left">←</button>
+                        <button type="button" class="game-nav__btn" id="g-right">→</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
-<!-- --------------------------------------------------------------------------------- -->
-              
+        <!-- --------------------------------------------------------------------------------- -->
+
 
     </main>
     <div id="footer"></div>
@@ -101,4 +112,5 @@
     <script src="js/game.js"></script>
     <script>$('#footer').load('footer.html');</script>
 </body>
+
 </html>
