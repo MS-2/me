@@ -1,0 +1,16 @@
+{
+"companyName": "DefaultCompany",
+"productName": "Alaskan",
+"productVersion": "0.1",
+"dataUrl": "1a504462dca4d741f419e1113fa82a84.unityweb",
+"wasmCodeUrl": "8e12a4193d399b0732b8efaf914cac45.wasm",
+"wasmFrameworkUrl": "104263b0e7b32a5a4f7a5109f0819edc.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.4.10f1"
+}

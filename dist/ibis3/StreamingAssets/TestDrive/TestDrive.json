@@ -1,0 +1,312 @@
+{
+  "root": 1,
+  "nodes":[
+    {
+      "nid": 1,
+      "video": 1,
+      "options": {
+        "title": "Comienza la aventura",
+        "description": "Elegí una opción para comenzar tu viaje: ON ROAD / OFF ROAD",
+        "items": [
+          {
+            "text": "ON ROAD\nConfort Interior",
+            "node": 2
+          },
+          {
+            "text": "OFF ROAD\nPotencia y capacidad",
+            "node": 3
+          }
+        ]
+      }
+    },
+    {
+      "nid": 2,
+      "video": 2,
+      "options": {
+        "title": "Elegí una nueva opción",
+        "description": "",
+        "items": [
+          {
+            "text": "ON ROAD\nRobustez y eficiencia",
+            "node": 4
+          },
+          {
+            "text": "ON ROAD\nTecnología",
+            "node": 5
+          }
+        ]
+      }
+    },
+    {
+      "nid": 3,
+      "video": 6,
+      "options": {
+        "title": "Elegí una nueva opción",
+        "description": "",
+        "items": [
+          {
+            "text": "OFF ROAD\nRobustez",
+            "node": 6
+          },
+          {
+            "text": "OFF ROAD\nSeguridad y tecnología",            
+            "node": 7
+          }
+        ]
+      }
+    },
+    {
+      "nid": 4,
+      "video": 3,
+      "options": {
+        "title": "Elegí una nueva opción",
+        "description": "",
+        "items": [
+          {
+            "text": "ON ROAD\nTecnología",
+            "node": 8
+          },
+          {
+            "text": "ON ROAD\nSeguridad activa y pasiva",
+            "node": 9
+          }
+        ]
+      }
+    },
+    {
+      "nid": 5,
+      "video": 5,
+      "options": {
+        "title": "Elegí una nueva opción",
+        "description": "",
+        "items": [
+          {
+            "text": "ON ROAD\nSeguridad activa y pasiva",
+            "node": 10
+          },
+          {
+            "text": "ON ROAD\nRobustez y eficiencia",
+            "node": 11
+          }
+        ]
+      }
+    },
+    {
+      "nid": 6,
+      "video": 7,
+      "options": {
+        "title": "Elegí una nueva opción",
+        "description": "",
+        "items": [
+          {
+            "text": "OFF ROAD\nSeguridad y tecnología",    
+            "node": 12
+          },
+          {
+            "text": "OFF ROAD\n4x4",    
+            "node": 13
+          }
+        ]
+      }
+    },
+    {
+      "nid": 7,
+      "video": 8,
+      "options": {
+        "title": "Elegí una nueva opción",
+        "description": "",
+        "items": [
+          {
+            "text": "OFF ROAD\n4x4",    
+            "node": 14
+          },
+          {
+            "text": "OFF ROAD\nRobustez",
+            "node": 15
+          }
+        ]
+      }
+    },
+    {
+      "nid": 8,
+      "video": 5,
+      "options": {
+        "title": "",
+        "description": "",
+        "items": [
+          {
+            "thumbnail": "",
+            "text": "",
+            "node": 16
+          }
+        ]
+      }
+    },
+    {
+      "nid": 9,
+      "video": 4,
+      "options": {
+        "title": "",
+        "description": "",
+        "items": [
+          {
+            "thumbnail": "",
+            "text": "",
+            "node": 16
+          }
+        ]
+      }
+    },
+    {
+      "nid": 10,
+      "video": 4,
+      "options": {
+        "title": "",
+        "description": "",
+        "items": [
+          {
+            "thumbnail": "",
+            "text": "",
+            "node": 16
+          }
+        ]
+      }
+    },
+    {
+      "nid": 11,
+      "video": 3,
+      "options": {
+        "title": "",
+        "description": "",
+        "items": [
+          {
+            "thumbnail": "",
+            "text": "",
+            "node": 16
+          }
+        ]
+      }
+    },
+    {
+      "nid": 12,
+      "video": 8,
+      "options": {
+        "title": "",
+        "description": "",
+        "items": [
+          {
+            "thumbnail": "",
+            "text": "",
+            "node": 16
+          }
+        ]
+      }
+    },
+    {
+      "nid": 13,
+      "video": 9,
+      "options": {
+        "title": "",
+        "description": "",
+        "items": [
+          {
+            "thumbnail": "",
+            "text": "",
+            "node": 16
+          }
+        ]
+      }
+    },
+    {
+      "nid": 14,
+      "video": 9,
+      "options": {
+        "title": "",
+        "description": "",
+        "items": [
+          {
+            "thumbnail": "",
+            "text": "",
+            "node": 16
+          }
+        ]
+      }
+    },
+    {
+      "nid": 15,
+      "video": 7,
+      "options": {
+        "title": "",
+        "description": "",
+        "items": [
+          {
+            "thumbnail": "",
+            "text": "",
+            "node": 16
+          }
+        ]
+      }
+    },
+    {
+      "nid": 16,
+      "video": 10,
+      "options": {
+        "title": "",
+        "description": "",
+        "items": []
+      }
+    }
+  ],
+  "videos": [
+    {
+      "vid": 1,
+      "tag": "Presentacion",
+      "path": "/video/fase2/testdrive/v3/hls/01-Presentacion_v11_2-final.m3u8"
+    },
+    {
+      "vid": 2,
+      "tag": "ON ROAD - Confort interior",
+      "path": "/video/fase2/testdrive/v3/hls/02-OnRoad_Confort_interior_v11_2-final.m3u8"
+    },
+    {
+      "vid": 3,
+      "tag": "ON ROAD - Robustez y eficiencia",
+      "path": "/video/fase2/testdrive/v3/hls/03-OnRoad_Robustez_y_Potencia_v11_2-final.m3u8"
+    },
+    {
+      "vid": 4,
+      "tag": "ON ROAD - Seguridad activa y pasiva",
+      "path": "/video/fase2/testdrive/v3/hls/04-OnRoad_Seguridad_v11_2-final.m3u8"
+    },
+    {
+      "vid": 5,
+      "tag": "ON ROAD - Tecnologia",
+      "path": "/video/fase2/testdrive/v3/hls/05-OnRoad_Tecnologia_v11_2-final.m3u8"
+    },
+    {
+      "vid": 6,
+      "tag": "OFF ROAD - Potencia y capacidad",
+      "path": "/video/fase2/testdrive/v3/hls/06-OffRoad_Potencia_v11_2-final.m3u8"
+    },
+    {
+      "vid": 7,
+      "tag": "OFF ROAD - Robustez",
+      "path": "/video/fase2/testdrive/v3/hls/07-OffRoad_Robustez_v11_2-final.m3u8"
+    },
+    {
+      "vid": 8,
+      "tag": "OFF ROAD - Seguridad y tecnologia",
+      "path": "/video/fase2/testdrive/v3/hls/08-OffRoad_Seguridad_y_Tecnologia_v11_2-final.m3u8"
+    },
+    {
+      "vid": 9,
+      "tag": "OFF ROAD - 4x4",
+      "path": "/video/fase2/testdrive/v3/hls/09-OffRoad_Doble_Traccion_v11_2-final.m3u8"
+    },
+    {
+      "vid": 10,
+      "tag": "Despedida",
+      "path": "/video/fase2/testdrive/v3/hls/10-Despedida_v11A_2-final.m3u8"
+    }
+  ]
+}
