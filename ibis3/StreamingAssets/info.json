@@ -1,0 +1,94 @@
+{
+    "data": {
+        "site_low_url_raw": "/cms/{0}/launch-welcome",
+        "exit_url": "/logout",
+        "faqs_url": "/faqs",
+        "time_url": "https://ws0kl9cagb.execute-api.eu-west-1.amazonaws.com/dev/time_utc",
+        "updateOnlinePlayersInterval": 30.0,
+        "cloudfrontUrl": "https://renault-alaskan.s3.sa-east-1.amazonaws.com/test",
+        "skipVideo": false,
+        "skipCountdown": false,
+        "useLocalTime": true,
+        "autoSendToAuditorium": true,
+        "event_start": "2020-11-20T14:35:00.0-03:00",
+        "pdf_path": "/pdf/RenaultAlaskan.pdf",
+        "videoWallPath": "/video/fase2/videowall/hls/videowall_flat-final.m3u8",
+        "car_hotspot_videos": {
+            "videos": [
+                {
+                    "path": "/video/fase2/hotspots/v3/hls/1-FRENTE_VF_Nueva_Banda_V2_flat-final.m3u8",
+                    "videoFormat": 0,
+                    "videoPlayerDisplayType": 2,
+                    "videoPlayerUiType": 2
+                },
+                {
+                    "path": "/video/fase2/hotspots/v3/hls/2-MOTOR_VF_Nueva_Banda_V2_flat-final.m3u8",
+                    "videoFormat": 0,
+                    "videoPlayerDisplayType": 2,
+                    "videoPlayerUiType": 2
+                },
+                {
+                    "path": "/video/fase2/hotspots/v3/hls/08_R_Alaskan_VirtualTour-Espana_2-final.m3u8",
+                    "videoFormat": 2,
+                    "videoPlayerDisplayType": 0,
+                    "videoPlayerUiType": 1
+                },
+                {
+                    "path": "/video/fase2/hotspots/v3/hls/4-BARRA_VF_Nueva_Banda_V2_flat-final.m3u8",
+                    "videoFormat": 0,
+                    "videoPlayerDisplayType": 2,
+                    "videoPlayerUiType": 2
+                },
+                {
+                    "path": "/video/fase2/hotspots/v3/hls/5-SUSPENSION_VF_Nueva_Banda_V2_flat-final.m3u8",
+                    "videoFormat": 0,
+                    "videoPlayerDisplayType": 2,
+                    "videoPlayerUiType": 2
+                },
+                {
+                    "path": "/video/fase2/hotspots/v3/hls/6-CAPOTA_MARITIMA_VF_Nueva_Banda_V2_flat-final.m3u8",
+                    "videoFormat": 0,
+                    "videoPlayerDisplayType": 2,
+                    "videoPlayerUiType": 2
+                },
+                {
+                    "path": "/video/fase2/hotspots/v3/hls/3-LATERAL_VF_Nueva_Banda_V2_flat-final.m3u8",
+                    "videoFormat": 0,
+                    "videoPlayerDisplayType": 2,
+                    "videoPlayerUiType": 2
+                }
+            ]
+        },
+        "fsiVideo": {
+            "path": "/video/fase2/fabrica360/hls/ALASKAN_360-v26-4K_2-final.m3u8",
+            "videoFormat": 2,
+            "videoPlayerDisplayType": 0,
+            "videoPlayerUiType": 1
+        },
+        "initVideo": {
+            "path": "/video/fase2/auditorio/hls/Alaskan_Comercial_Plataforma_online_v2_flat-final.m3u8",
+            "videoFormat": 0,
+            "videoPlayerDisplayType": 1,
+            "videoPlayerUiType": 1
+        },
+        "eventVideo": {
+            "path": "/video/fase3/auditorio/v1/hls/MODULO_PRODUCTO_V2_A_flat-final.m3u8",
+            "videoFormat": 0,
+            "videoPlayerDisplayType": 0,
+            "videoPlayerUiType": 0
+        },
+        "develationVideo": {
+            "path": "/video/fase3/auditorio/v1/hls/Modulo_Tecnico_Renault_Alaskan_v4_flat-final.m3u8",
+            "videoFormat": 0,
+            "videoPlayerDisplayType": 0,
+            "videoPlayerUiType": 0
+        },
+        "spotVideoAvailable": false,
+        "spotVideo": {
+            "path": "/video/fase2/auditorio/hls/Renault_Alaskan_Spot_2_flat-final.m3u8",
+            "videoFormat": 0,
+            "videoPlayerDisplayType": 0,
+            "videoPlayerUiType": 0
+        }
+    }
+}
