@@ -1,125 +1,131 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Alaskan</title>
-    <link rel="shortcut icon" href="favicons/favicon.ico">
-    <link href="css/unity.css" rel="stylesheet">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Alaskan</title>
+  <link rel="shortcut icon" href="favicons/favicon.ico">
+  <link href="css/unity.css" rel="stylesheet">
+  <meta http-equiv="Content-Type" content="application/wasm">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jshttp/mime-db@master/db.json">
+</head>
 
-  <body>
-    <div id="unityContainer"></div>
-    <div id="loader">
-      <img class="logo" src="logo.png">
-      <div class="spinner"></div>
-      <div class="progress"><div class="full"></div></div>
+<body>
+  <div id="unityContainer"></div>
+  <div id="loader">
+    <img class="logo" src="logo.png">
+    <div class="spinner"></div>
+    <div class="progress">
+      <div class="full"></div>
     </div>
-  </body>
+  </div>
+</body>
 
-  <script src="https://cdn.jsdelivr.net/npm/ismobilejs@1/dist/isMobile.min.js"></script>
-  <script src="js/hls.min.js"></script>
-  <script src="Build/UnityLoader.js"></script>
-  <script>
-    var gameInstance;
-    //Custom progress:
-    gameInstance = UnityLoader.instantiate("unityContainer", "Build/alaskan.json?"+Date.now(), {onProgress: UnityProgress,
-        Module : {
-          backgroundColor: "#fecd0e",
-          cacheControl: {"default": "immutable"},
-          arguments: ""
-        }});
-
-    //This function is used for the custom progress.
-    function UnityProgress(gameInstance, progress) {
-      if (!gameInstance.Module) {
-        return;
-      }
-      const loader = document.querySelector("#loader");
-      if (!gameInstance.progress) {
-        const progress = document.querySelector("#loader .progress");
-        progress.style.display = "block";
-        gameInstance.progress = progress.querySelector(".full");
-        loader.querySelector(".spinner").style.display = "none";
-      }
-      gameInstance.progress.style.transform = `scaleX(${progress})`;
-      if (progress === 1 && !gameInstance.removeTimeout) {
-        gameInstance.removeTimeout = setTimeout(function() {
-            loader.style.display = "none";
-        }, 0);
-      }
+<script src="https://cdn.jsdelivr.net/npm/ismobilejs@1/dist/isMobile.min.js"></script>
+<script src="js/hls.min.js"></script>
+<script src="Build/UnityLoader.js"></script>
+<script>
+  var gameInstance;
+  //Custom progress:
+  gameInstance = UnityLoader.instantiate("unityContainer", "Build/alaskan.json?" + Date.now(), {
+    onProgress: UnityProgress,
+    Module: {
+      backgroundColor: "#fecd0e",
+      cacheControl: { "default": "immutable" },
+      arguments: ""
     }
+  });
 
-    function mobileBrowser(){
-    	return isMobile.any;
+  //This function is used for the custom progress.
+  function UnityProgress(gameInstance, progress) {
+    if (!gameInstance.Module) {
+      return;
     }
+    const loader = document.querySelector("#loader");
+    if (!gameInstance.progress) {
+      const progress = document.querySelector("#loader .progress");
+      progress.style.display = "block";
+      gameInstance.progress = progress.querySelector(".full");
+      loader.querySelector(".spinner").style.display = "none";
+    }
+    gameInstance.progress.style.transform = `scaleX(${progress})`;
+    if (progress === 1 && !gameInstance.removeTimeout) {
+      gameInstance.removeTimeout = setTimeout(function () {
+        loader.style.display = "none";
+      }, 0);
+    }
+  }
 
-    function sendPageToGA(eventType, page){
-    	console.log("Register analytics " + eventType + ": " + page);
-    }
+  function mobileBrowser() {
+    return isMobile.any;
+  }
 
-    function sendEventToGA(type, category, action, label){
-		console.log("Register analytics " + type + " category: " + category + " action: " + action + " label: " + label);
-    }
+  function sendPageToGA(eventType, page) {
+    console.log("Register analytics " + eventType + ": " + page);
+  }
 
-    var WebController = {
-      GetToken: function () {
-          console.log("GetToken");
-          return "TOKEN_TOKEN_TOKEN";
-      },
-      RefreshToken: function () {
-          console.log("RefreshToken");
-          gameInstance.SendMessage("JSManager","RefreshTokenCallback", "TOKEN_FRESCO");
-      },
-      StartCall: function () {
-          console.log("StartCall");
-      },
-      AcceptCall: function () {
-          console.log("AcceptCall");
-      },
-      EndCall: function () {
-          console.log("EndCall");
-      },
-      CancelCall: function () {
-          console.log("CancelCall");
-      },
-      CancelIncomingCall: function (reason) {
-          console.log("CancelIncomingCall " + reason);
-      },
-      ActivateChat: function (value) {
-          console.log("ActivateChat " + value);
-      },
-      ShowSearchUserBar: function (value) {
-          console.log("ShowSearchUserBar " + value);
-      },
-      MuteVoice: function (value) {
-          console.log("MuteVoice " + value);
-      },
-      GetUserInfo: function () {
-          console.log("GetUserInfo");
-          gameInstance.SendMessage("JSManager","GetUserInfoCallback", '{"response_code":200,"error":0,"error_message":"","data":{"id":12,"role_id":3,"name":"UnityUser_1","surname":null,"email":"unity_1@test.com","zipcode":null,"company":null,"city":null,"nie":null,"media":null,"commercials":0,"email_verified_at":null,"lang":"es","created_at":"2020-11-06T14:52:25.000000Z","updated_at":"2020-11-10T11:47:10.000000Z","avatar_config":"null","online":0}}');
-      },
-      SetAvatarConfig: function (json) {
-          console.log("SetAvatarConfig " + json);
-          gameInstance.SendMessage("JSManager","SetAvatarConfigCallback", '{"response_code":200,"error":0,"error_message":"","data":{"id":12,"role_id":3,"name":"UnityUser_1","surname":null,"email":"unity_1@test.com","zipcode":null,"company":null,"city":null,"nie":null,"media":null,"commercials":0,"email_verified_at":null,"lang":"es","created_at":"2020-11-06T14:52:25.000000Z","updated_at":"2020-11-10T11:47:10.000000Z","avatar_config":"null","online":0}}');
-      },
-      GetPlayersInfo: function (ids) {
-          console.log("GetPlayersInfo " + ids);
-          gameInstance.SendMessage("JSManager","GetPlayersInfoCallback", '{"response_code":200,"error":0,"error_message":"","data":[{"id":12,"role_id":3,"name":"UnityUser_1","surname":null,"email":"unity_1@test.com","zipcode":null,"company":null,"city":null,"nie":null,"media":null,"commercials":0,"email_verified_at":null,"lang":"es","created_at":"2020-11-06T14:52:25.000000Z","updated_at":"2020-11-11T14:17:28.000000Z","avatar_config":"null","online":0}]}');
-      },
-      GetOnlinePlayers: function (n, list) {
-          console.log("CheckOnlineUsers " + n + " " + list);
-          gameInstance.SendMessage("JSManager","GetOnlinePlayersCallback", '{"response_code":200,"error":0,"error_message":"","data":[{"id":12,"role_id":3,"name":"UnityUser_1","surname":null,"email":"unity_1@test.com","zipcode":null,"company":null,"city":null,"nie":null,"media":null,"commercials":0,"email_verified_at":null,"lang":"es","created_at":"2020-11-06T14:52:25.000000Z","updated_at":"2020-11-11T14:17:28.000000Z","avatar_config":"null","online":0}]}');
-      },
-      VideoAnalytics: function(videoName, duration){
-        console.log("VideoAnalytics: " + videoName + " " + duration);
-      },
-      HotspotAnalytics: function(){
-        console.log("HotspotAnalytics");
-      }
+  function sendEventToGA(type, category, action, label) {
+    console.log("Register analytics " + type + " category: " + category + " action: " + action + " label: " + label);
+  }
+
+  var WebController = {
+    GetToken: function () {
+      console.log("GetToken");
+      return "TOKEN_TOKEN_TOKEN";
+    },
+    RefreshToken: function () {
+      console.log("RefreshToken");
+      gameInstance.SendMessage("JSManager", "RefreshTokenCallback", "TOKEN_FRESCO");
+    },
+    StartCall: function () {
+      console.log("StartCall");
+    },
+    AcceptCall: function () {
+      console.log("AcceptCall");
+    },
+    EndCall: function () {
+      console.log("EndCall");
+    },
+    CancelCall: function () {
+      console.log("CancelCall");
+    },
+    CancelIncomingCall: function (reason) {
+      console.log("CancelIncomingCall " + reason);
+    },
+    ActivateChat: function (value) {
+      console.log("ActivateChat " + value);
+    },
+    ShowSearchUserBar: function (value) {
+      console.log("ShowSearchUserBar " + value);
+    },
+    MuteVoice: function (value) {
+      console.log("MuteVoice " + value);
+    },
+    GetUserInfo: function () {
+      console.log("GetUserInfo");
+      gameInstance.SendMessage("JSManager", "GetUserInfoCallback", '{"response_code":200,"error":0,"error_message":"","data":{"id":12,"role_id":3,"name":"UnityUser_1","surname":null,"email":"unity_1@test.com","zipcode":null,"company":null,"city":null,"nie":null,"media":null,"commercials":0,"email_verified_at":null,"lang":"es","created_at":"2020-11-06T14:52:25.000000Z","updated_at":"2020-11-10T11:47:10.000000Z","avatar_config":"null","online":0}}');
+    },
+    SetAvatarConfig: function (json) {
+      console.log("SetAvatarConfig " + json);
+      gameInstance.SendMessage("JSManager", "SetAvatarConfigCallback", '{"response_code":200,"error":0,"error_message":"","data":{"id":12,"role_id":3,"name":"UnityUser_1","surname":null,"email":"unity_1@test.com","zipcode":null,"company":null,"city":null,"nie":null,"media":null,"commercials":0,"email_verified_at":null,"lang":"es","created_at":"2020-11-06T14:52:25.000000Z","updated_at":"2020-11-10T11:47:10.000000Z","avatar_config":"null","online":0}}');
+    },
+    GetPlayersInfo: function (ids) {
+      console.log("GetPlayersInfo " + ids);
+      gameInstance.SendMessage("JSManager", "GetPlayersInfoCallback", '{"response_code":200,"error":0,"error_message":"","data":[{"id":12,"role_id":3,"name":"UnityUser_1","surname":null,"email":"unity_1@test.com","zipcode":null,"company":null,"city":null,"nie":null,"media":null,"commercials":0,"email_verified_at":null,"lang":"es","created_at":"2020-11-06T14:52:25.000000Z","updated_at":"2020-11-11T14:17:28.000000Z","avatar_config":"null","online":0}]}');
+    },
+    GetOnlinePlayers: function (n, list) {
+      console.log("CheckOnlineUsers " + n + " " + list);
+      gameInstance.SendMessage("JSManager", "GetOnlinePlayersCallback", '{"response_code":200,"error":0,"error_message":"","data":[{"id":12,"role_id":3,"name":"UnityUser_1","surname":null,"email":"unity_1@test.com","zipcode":null,"company":null,"city":null,"nie":null,"media":null,"commercials":0,"email_verified_at":null,"lang":"es","created_at":"2020-11-06T14:52:25.000000Z","updated_at":"2020-11-11T14:17:28.000000Z","avatar_config":"null","online":0}]}');
+    },
+    VideoAnalytics: function (videoName, duration) {
+      console.log("VideoAnalytics: " + videoName + " " + duration);
+    },
+    HotspotAnalytics: function () {
+      console.log("HotspotAnalytics");
     }
-    
-  </script>
+  }
+
+</script>
 
 </html>
