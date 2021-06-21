@@ -147,12 +147,28 @@ main {
   padding: 4rem;
   min-height: calc(100vh - 60px); }
   main .icons {
-    margin-top: 1rem; }
+    margin-top: 1rem;  
+    font-size: 2rem;
+  }
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
         color: #63c0f5;
         transition: all 0.5s ease-out; }
+        main .BigIcons{
+          display:flex;
+         
+          font-size: 3rem;
+       
+         justify-content: space-evenly;
+        }
+        main .BigIcons a{
+          padding: 0.4rem;
+        }
+        main .BigIcons a:hover{
+          color: #63c0f5;
+          transition: all 0.5s ease-out;
+        }
   main#home {
     overflow: hidden; }
     main#home h1 {
