@@ -1,9 +1,8 @@
-
 @import 'config';
 @import 'menu';
 
 
-body{
+body {
     @include background;
     background: $primary-color;
     height: 100%;
@@ -13,90 +12,101 @@ body{
     color: set-text-color($primary-color);
 }
 
-*{
+* {
     box-sizing: border-box;
 }
 
-p{
+p {
     text-align: justify;
 }
 
-h1,h2,h3 {
+h1,
+h2,
+h3 {
     margin: 0;
     font-weight: 400;
     margin-bottom: 10px;
 
-    &.lg-heading{
+    &.lg-heading {
         font-size: 6rem;
     }
-    &.nombrepeq{
+
+    &.nombrepeq {
         font-size: 2rem;
         padding: 0.2rem 1rem;
         background: rgba(lighten($color: #000, $amount: 2), 0.5);
     }
 }
 
-a{
+a {
     color: white;
     text-decoration: none;
-    text-shadow: 0 0 5px rgba(104,182,255,0.9);
+    text-shadow: 0 0 5px rgba(104, 182, 255, 0.9);
 }
 
-header{
+header {
     position: fixed;
     z-index: 2;
     width: 100%;
 }
 
-.text-secondary{
+.text-secondary {
     color: $secondary-color;
 
 }
 
-main{
+main {
     padding: 4rem;
     // height: 100%;
     min-height: calc(100vh - 60px);
-    .icons{
+
+    .icons {
         margin-top: 1rem;
-        a{
+
+        a {
             padding: 0.4rem;
-            &:hover{
+
+            &:hover {
                 color: $secondary-color;
                 @include easyOut();
             }
         }
     }
-     .BigIcons{
-        display:flex;
+
+    .BigIcons {
+        display: flex;
         font-size: 3rem;
-       justify-content: space-evenly;
-        a{
+        justify-content: space-evenly;
+
+        a {
             padding: 0.4rem;
-            &:hover{
+
+            &:hover {
                 color: $secondary-color;
                 @include easyOut();
             }
         }
-      }
+    }
 
-    &#home{
+    &#home {
         overflow: hidden;
-        h1{
+
+        h1 {
             margin-top: 20vh;
         }
     }
 }
 
-.about-info{
+.about-info {
     display: grid;
     grid-gap: 30px;
-    grid-template-areas: 
-    'bioimage bio bio'
-    'job1 job2 job3';
-    grid-template-columns: repeat(3,1fr);
+    grid-template-areas:
+        'bioimage bio bio'
+        'job1 job2 job3'
+        'job4 job5 job6';
+    grid-template-columns: repeat(3, 1fr);
 
-    .bio-image{
+    .bio-image {
         height: 200px;
         width: 200px;
         grid-area: bioimage;
@@ -104,25 +114,40 @@ main{
         margin: auto;
         border: $secondary-color 3px solid;
     }
-    
-    .bio{
+
+    .bio {
         grid-area: bio;
         font-size: 1.5rem;
     }
-    
-    .job1{
+
+    .job1 {
         grid-area: job1;
     }
-    
-    .job2{
+
+    .job2 {
         grid-area: job2;
     }
-    
-    .job3{
+
+    .job3 {
         grid-area: job3;
 
     }
-    
+
+    .job4 {
+        grid-area: job4;
+
+    }
+
+    .job5 {
+        grid-area: job5;
+
+    }
+
+    .job6 {
+        grid-area: job6;
+
+    }
+
     .job {
         background: lighten($primary-color, 5);
         padding: 0.5rem;
@@ -132,16 +157,16 @@ main{
 
 //works projects
 
-.projects{
+.projects {
     display: grid;
-    grid-gap:0.7rem;
-    grid-template-columns: repeat(3,1fr);
+    grid-gap: 0.7rem;
+    grid-template-columns: repeat(3, 1fr);
 
-    img{
+    img {
         width: 100%;
         border: 3px white solid;
 
-        &:hover{
+        &:hover {
             opacity: 0.7;
             border-color: $secondary-color;
             @include easyOut;
@@ -151,26 +176,26 @@ main{
 
 //contact page
 
-.boxes
-{
+.boxes {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     margin-top: 1rem;
 
-    div{
+    div {
         font-size: 1.5rem;
         border: 3px white solid;
-        padding:  1.5rem 2rem;
+        padding: 1.5rem 2rem;
         margin-bottom: 3rem;
         @include easyOut;
 
-        &:hover{
+        &:hover {
             padding: 0.5rem 1.5rem;
             background: $secondary-color;
             color: set-text-color($secondary-color);
-            span{
+
+            span {
                 color: set-text-color($secondary-color);
             }
         }
@@ -178,31 +203,32 @@ main{
 }
 
 //estilos de botones
-.btn{
+.btn {
     display: block;
     padding: 0.5rem 1rem;
     border: 0;
     margin-bottom: 0.3rem;
+
     &:hover {
         background: $secondary-color;
         color: set-text-color($secondary-color);
     }
 }
 
-.btn-light{
+.btn-light {
     @extend .btn;
     background: lighten($primary-color, 50);
     color: black;
 }
 
-.btn-dark{
+.btn-dark {
     @extend .btn;
     background: darken($primary-color, 50);
     color: white;
 }
 
 
-#main-footer{
+#main-footer {
     text-align: center;
     padding: 1rem;
     background: darken($primary-color, 10);
@@ -214,15 +240,15 @@ main{
 .dust {
     position: absolute;
     color: red;
-  }
+}
 
-  #start-btn {
+#start-btn {
 
     border: none;
     background: transparent;
-    
-      }
-    
+
+}
+
 
 
 
