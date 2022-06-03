@@ -2,6 +2,35 @@
 <html lang="en">
 
 <head>
+    <script>
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            /* Loop through a collection of all HTML elements: */
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                /*search for elements with a certain atrribute:*/
+                file = elmnt.getAttribute("w3-include-html");
+                if (file) {
+                    /* Make an HTTP request using the attribute value as the file name: */
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                            if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                            /* Remove the attribute, and call this function once more: */
+                            elmnt.removeAttribute("w3-include-html");
+                            includeHTML();
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    /* Exit the function: */
+                    return;
+                }
+            }
+        }
+    </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L4MXWEQFRS"></script>
     <script>
@@ -36,16 +65,14 @@
         </div>
         <nav class="menu">
             <div class="menu-marca">
-                <div class="retrato">
-
-                </div>
+                <div class="retrato"></div>
             </div>
             <ul class="menu-nav">
                 <li class="nav-item current">
                     <a href="index.html" class="nav-link">home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="about.html" class="nav-link">about</a>
+                    <a href="about.html" class="nav-link">skills</a>
                 </li>
                 <li class="nav-item">
                     <a href="work.html" class="nav-link">projects</a>
@@ -54,38 +81,28 @@
                     <a href="contact.html" class="nav-link">contact</a>
                 </li>
                 <li class="nav-item">
-                    <a href="invader.html" class="nav-link">invader</a>
+                    <a href="invader.html" class="nav-link">bonus</a>
                 </li>
 
             </ul>
         </nav>
-    </header>
-    <main id="home">
 
+
+    </header>
+
+    <main id="home">
         <h1 class="lg-heading">
             Juan <span class="text-secondary">J</span>
         </h1>
-        <!-- marioooooooooooo -->
 
+        <!-- marioooooooooooo -->
         <div class="game-body__inner">
             <canvas id="space-invaders" />
         </div>
-
         <!-- marioooooooooooo -->
 
-        <!-- <div class="BigIcons">
-            <a target="_blank" href="https://www.linkedin.com/in/juanjoserodrigueznelo">
-                <i class="fab fa-linkedin fa-2x"></i>
-            </a>
-            <a target="_blank" href="https://github.com/MS-2">
-                <i class="fab fa-github fa-2x"></i>
-            </a>
-            <a target="_blank" href="https://github.com/MS-2">
-                <i class="fab fa-gitlab fa-2x"></i>
-            </a>
-        </div> -->
         <h2 class="nombrepeq">
-            Dev/EngineeEr
+            Technical Leader. Dev/Engineer
         </h2>
         <div class="icons">
             <a target="_blank" href="https://www.linkedin.com/in/juanjoserodrigueznelo">
@@ -98,17 +115,6 @@
                 <i class="fab fa-gitlab fa-2x"></i>
             </a>
         </div>
-
-
-        <!-- 
-        <div class="LI-profile-badge" data-version="v1" data-size="large" data-locale="es_ES" data-type="horizontal"
-            data-theme="dark" data-vanity="juan-jose-rodriguez-nelo-8a3093177">
-            <a class="LI-simple-link"
-                href='https://ar.linkedin.com/in/juan-jose-rodriguez-nelo-8a3093177?trk=profile-badge'>
-            </a>
-        </div> -->
-
-
     </main>
     <script src="js/main.js"></script>
     <script src="js/mario.js"></script>
